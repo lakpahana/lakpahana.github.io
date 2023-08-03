@@ -1,0 +1,9 @@
+Session vs JWT
+
+Session is a server-side storage of information that is created when a user logs in to a web application. The session is stored on the server and the session ID is stored in a cookie on the client-side. The server uses the session ID to retrieve the session data.
+
+JWT is 
+
+
+
+
