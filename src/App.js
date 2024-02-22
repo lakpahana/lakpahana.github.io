@@ -9,7 +9,7 @@ function App() {
       <div className="grid gap-4 max-w-5xl w-full rounded-xl bg-white shadow-lg overflow-hidden p-10">
         <div className="space-y-3 text-center">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl">Sanjula Rathnayaka</h1>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl">Sanjula Lakpahana</h1>
             <p className="font-medium tracking-wide text-gray-500 md:text-xl/relaxed dark:text-gray-400">
               Computer Engineering Undergraduate
             </p>
