@@ -1,4 +1,4 @@
-import links from "./links.js";
+import {links} from "./links.js";
 
 console.log("Script loaded");
 var url = window.location.href;

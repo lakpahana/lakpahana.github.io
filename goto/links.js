@@ -1,6 +1,6 @@
 
 
-const links = [
+export const links = [
     {
         "name": "fiver",
         "redirectTo": "https://www.fiverr.com/"
@@ -11,5 +11,4 @@ const links = [
     }
 ]
 
-export default links;
 
