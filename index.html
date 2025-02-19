@@ -146,6 +146,7 @@
 
 
 
+
     <!--
       - #main-content
     -->
@@ -178,7 +179,11 @@
         <header>
           <h2 class="h2 article-title">Hi there</h2>
         </header>
-
+        <div class="hidden-chat-bot" style="display: none;">
+          <textarea id="chat-bot" class="chat-bot" placeholder="Type your message here..."
+            style="color: bisque;"></textarea>
+          <button id="chat-bot-send" class="chat-bot-send">Send</button>
+        </div>
         <section class="about-text">
           <p>
             I am Sanjula Lakpahana, a passionate Computer Engineering undergraduate with a strong interest in software
@@ -584,25 +589,37 @@
 
   </main>
 
-  <div class="hidden-chat-bot" style="display: none;">
-    <textarea id="chat-bot" class="chat-bot" placeholder="Type your message here..."></textarea>
-    <button id="chat-bot-send" class="chat-bot-send">Send</button>
-  </div>
 
   <script>
     document.addEventListener('keydown', function (event) {
-      if (event.ctrlKey && event.shiftKey && event.key === 'Z') {
+      if (event.ctrlKey && event.shiftKey && event.key === 'X') {
         document.querySelector('.hidden-chat-bot').style.display = 'block';
       }
     });
 
+    testAPi = "AIzaSyA7vHFIPnuDauJrc_g-4wEeGp-s0cXVEz4";
+
+    masterPrompt = "you are an expert in AI quizzes. I will provide mcq questions and you have to answer them. Please provide correct answer only no need explanation.";
+
     document.getElementById('chat-bot-send').addEventListener('click', function () {
-      const message = document.getElementById('chat-bot').value;
-      if (message) {
-        alert('Message sent successfully!');
-        document.getElementById('chat-bot').value = '';
-      }
-    });
+      let text = document.getElementById('chat-bot').value;
+      fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${testAPi}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "contents": [{
+            "parts": [{
+              "text": masterPrompt + text
+            }]
+          }]
+        })
+      }).then(res => res.json()).then(data => {
+        console.log(data);
+        document.getElementById('chat-bot').value = data.candidates[0].content.parts[0].text;
+      })
+    })
   </script>
 
 
