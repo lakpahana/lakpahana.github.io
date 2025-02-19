@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanjula's Portfolio</title>
+  <title>Sanjula's Portfolio - 2025</title>
 
   <!--
     - favicon
@@ -584,15 +584,33 @@
 
   </main>
 
+  <div class="hidden-chat-bot" style="display: none;">
+    <textarea id="chat-bot" class="chat-bot" placeholder="Type your message here..."></textarea>
+    <button id="chat-bot-send" class="chat-bot-send">Send</button>
+  </div>
 
+  <script>
+    //  if key binding Ctrl + Shift + I, open alert
+    document.addEventListener('keydown', function (event) {
+      if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+        document.querySelector('.hidden-chat-bot').style.display = 'block';
+      }
+    });
 
-
+    document.getElementById('chat-bot-send').addEventListener('click', function () {
+      const message = document.getElementById('chat-bot').value;
+      if (message) {
+        alert('Message sent successfully!');
+        document.getElementById('chat-bot').value = '';
+      }
+    });
+  </script>
 
 
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <!-- <script src="./assets/js/script.js"></script> -->
 
   <!--
     - ionicon link
