@@ -2,637 +2,275 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanjula's Portfolio - 2025</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjula Lakpahana – Portfolio</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #111;
+      --accent: #0066cc;
+      --border: #e0e0e0;
+      --mono: "SF Mono", Consolas, monospace;
+    }
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      display: flex;
+      min-height: 100vh;
+    }
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    aside,
+    main {
+      padding: 3rem;
+    }
+
+    aside {
+      flex: 0 0 320px;
+      border-right: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    aside h1 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    aside ul {
+      list-style: none;
+      margin: 1rem 0 2rem;
+    }
+
+    aside li {
+      margin: .4rem 0;
+    }
+
+    aside a,
+    main a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    aside a:hover,
+    main a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      overflow-x: auto;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+
+    th,
+    td {
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-weight: 600;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: .75rem;
+      background: #eee;
+      padding: .2rem .4rem;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        flex-direction: column;
+      }
+
+      aside {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        flex: none;
+        position: static;
+        height: auto;
+      }
+
+      main {
+        height: auto;
+        overflow-y: visible;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+  <!-- Left column -->
+  <aside>
+    <h1>Sanjula Lakpahana</h1>
+    <p>Ex SWE Intern @WSO2</p>
+    <p>Computer Engieering Undergrad @UOR</p>
+    <br>
+    <p>
+      <a href="mailto:agslakpahana@gmail.com">Email</a> ·
+      <a href="https://github.com/lakpahana">GitHub</a> ·
+      <a href="https://linkedin.com/in/lakpahana">LinkedIn</a>
+    </p>
+    <br>
+    <h2>Tech I like</h2>
+    <p>
+      <span class="tag">JavaScript</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">Go</span>
+      <span class="tag">Python</span>
+      <span class="tag">React</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">AWS</span>
+      <span class="tag">Docker</span>
+    </p>
+    <br>
+    <h2>Open-source contributions</h2>
+    <ul>
+      <li><a href="https://github.com/asgardeo/asgardeo-auth-react-sdk">Asgardeo React SDK</a></li>
+      <li><a href="https://central.ballerina.io/lakpahana/firebase_auth/1.0.1">Firebase Auth Ballerina Library</a></li>
+      <li><a href="https://central.ballerina.io/lakpahana/firebase_realtime_database/0.7.4">Firebase Realtime Database
+          Ballerina Library</a></li>
+    </ul>
 
+
+  </aside>
+
+  <!-- Right column -->
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Sanjula Lakpahana" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Sanjula Lakpahana">Sanjula Lakpahana</h1>
-
-          <p class="title">Undergraduate Computer Engineer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/lakpahana" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://medium.com/@lakpahana" class="social-link">
-              <ion-icon name="logo-medium"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/lakpahana/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:agslakpahana@gmail.com" class="contact-link">agslakpahana@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+94717967017" class="contact-link">+94 (71) 7967017</a>
-            </div>
-
-          </li>
-
-
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Ginigathena, Sri Lanka</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-
-
-      </div>
-
-    </aside>
-
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">Hi there</h2>
-        </header>
-        <div class="hidden-chat-bot" style="display: none;">
-          <textarea id="chat-bot" class="chat-bot" placeholder="Type your message here..."
-            style="color: bisque;"></textarea>
-          <button id="chat-bot-send" class="chat-bot-send">Send</button>
-        </div>
-        <section class="about-text">
-          <p>
-            I am Sanjula Lakpahana, a passionate Computer Engineering undergraduate with a strong interest in software
-            development and technology. Proficient in programming languages like JavaScript, Python, and Java, I also
-            excel in OOP concepts, design patterns, and agile methodologies. My freelancing experience has enhanced my
-            technical skills and client communication abilities. As Vice Chairman of The Institution of Engineering and
-            Technology (IET) on Campus Ruhuna, I actively contribute to event planning and knowledge-sharing
-            initiatives. Dedicated to continual growth, I am committed to making meaningful contributions to the
-            engineering community through technology.
-          </p>
-        </section>
-
-
-
-        <section>
-          <header>
-            <h2 class="h2 article-title">Projects</h2>
-          </header>
-
-          <!-- <section class="projects">
-  
-            <ul class="project-list">
-  
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">Finance</h3>
-  
-                  <p class="project-category">Web development</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">Orizon</h3>
-  
-                  <p class="project-category">Web development</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="web design">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">Fundo</h3>
-  
-                  <p class="project-category">Web design</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="applications">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">Brawlhalla</h3>
-  
-                  <p class="project-category">Applications</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="web design">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">DSM.</h3>
-  
-                  <p class="project-category">Web design</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="web design">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">MetaSpark</h3>
-  
-                  <p class="project-category">Web design</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">Summary</h3>
-  
-                  <p class="project-category">Web development</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="applications">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">Task Manager</h3>
-  
-                  <p class="project-category">Applications</p>
-  
-                </a>
-              </li>
-  
-              <li class="project-item  active" data-filter-item data-category="web development">
-                <a href="#">
-  
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-  
-                    <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                  </figure>
-  
-                  <h3 class="project-title">Arrival</h3>
-  
-                  <p class="project-category">Web development</p>
-  
-                </a>
-              </li>
-  
-            </ul>
-  
-          </section> -->
-          <!-- <script>
-            setTimeout(()=>{
-              location.href = "https://github.com/lakpahana"
-            },2000)
-          </script> -->
-        </section>
-
-        <section>
-          <!-- <header>
-            <h2 class="h2 article-title">Blog</h2>
-          </header> -->
-
-          <!-- <section class="blog-posts">
-  
-            <ul class="blog-posts-list">
-  
-              <li class="blog-post-item">
-                <a href="#">
-  
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                  </figure>
-  
-                  <div class="blog-content">
-  
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-  
-                      <span class="dot"></span>
-  
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-  
-                    <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-  
-                    <p class="blog-text">
-                      Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                    </p>
-  
-                  </div>
-  
-                </a>
-              </li>
-  
-              <li class="blog-post-item">
-                <a href="#">
-  
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                  </figure>
-  
-                  <div class="blog-content">
-  
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-  
-                      <span class="dot"></span>
-  
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-  
-                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-  
-                    <p class="blog-text">
-                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                    </p>
-  
-                  </div>
-  
-                </a>
-              </li>
-  
-              <li class="blog-post-item">
-                <a href="#">
-  
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                  </figure>
-  
-                  <div class="blog-content">
-  
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-  
-                      <span class="dot"></span>
-  
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-  
-                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-  
-                    <p class="blog-text">
-                      Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                    </p>
-  
-                  </div>
-  
-                </a>
-              </li>
-  
-              <li class="blog-post-item">
-                <a href="#">
-  
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                  </figure>
-  
-                  <div class="blog-content">
-  
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-  
-                      <span class="dot"></span>
-  
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-  
-                    <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-  
-                    <p class="blog-text">
-                      Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                    </p>
-  
-                  </div>
-  
-                </a>
-              </li>
-  
-              <li class="blog-post-item">
-                <a href="#">
-  
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                  </figure>
-  
-                  <div class="blog-content">
-  
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-  
-                      <span class="dot"></span>
-  
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-  
-                    <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-  
-                    <p class="blog-text">
-                      Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-  
-                  </div>
-  
-                </a>
-              </li>
-  
-              <li class="blog-post-item">
-                <a href="#">
-  
-                  <figure class="blog-banner-box">
-                    <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                  </figure>
-  
-                  <div class="blog-content">
-  
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-  
-                      <span class="dot"></span>
-  
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-  
-                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-  
-                    <p class="blog-text">
-                      Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                    </p>
-  
-                  </div>
-  
-                </a>
-              </li>
-  
-            </ul>
-  
-          </section> -->
-        </section>
-      </article>
-
-
-
-
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-
-      </article>
-
-
-
-
-
-
-
-    </div>
-
+    <h2>Projects</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Stack</th>
+          <th>Highlights</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/lakpahana/discord-forum">Discord Forum Mirror</a></td>
+          <td><span class="tag">TypeScript</span> <span class="tag">Node.js</span> <span class="tag">Astro</span></td>
+          <td>SEO-friendly Discord forum archival with PII protection and GDPR compliance</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/minirun">MiniRun Runtime</a></td>
+          <td><span class="tag">C</span> <span class="tag">POSIX</span> <span class="tag">MPI</span></td>
+          <td>Lightweight cooperative task runtime with Go-routine-like concurrency</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/export-to-llm-gitingest">Export to LLM VS Code Extension</a></td>
+          <td><span class="tag">TypeScript</span> <span class="tag">VS Code API</span></td>
+          <td>LLM-friendly codebase analysis tool used by 300+ developers</td>
+        </tr>
+        <tr>
+          <td><a href="https://gitlab.com/nsnam/ns-3-dev/">NS-3 SaaS Platform (Final Year)</a></td>
+          <td><span class="tag">C++</span> <span class="tag">Python</span> <span class="tag">AWS</span></td>
+          <td>Scalable network simulation platform with cloud distribution</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/llm-server-sent-events-fastapi">LLM Server-Sent Events</a></td>
+          <td><span class="tag">FastAPI</span> <span class="tag">Python</span> <span class="tag">SSE</span></td>
+          <td>Real-time streaming of LLM responses to clients using Server-Sent Events</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/adaptive-video-uploader">Adaptive Video Uploader</a></td>
+          <td><span class="tag">Python</span> <span class="tag">FFmpeg</span> <span class="tag">Video Processing</span>
+          </td>
+          <td>Video pipeline: multi-resolution encoding, thumbnail generation, and server upload</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/go-salesforce-oauth2-refresh-grant">Go Salesforce OAuth2</a></td>
+          <td><span class="tag">Go</span> <span class="tag">OAuth2</span> <span class="tag">Salesforce</span></td>
+          <td>OAuth2 refresh grant flow implementation for Salesforce API authentication</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/write-my-naita">NAITA Report Generator</a></td>
+          <td><span class="tag">Go</span> <span class="tag">OpenAI</span> <span class="tag">Automation</span></td>
+          <td>Automated weekly training report generator for NAITA trainees</td>
+        </tr>
+        <tr>
+          <td><a href="https://central.ballerina.io/lakpahana/firebase_auth/1.0.1">Firebase Auth Ballerina Library</a>
+          </td>
+          <td><span class="tag">Ballerina</span> <span class="tag">Firebase</span> <span class="tag">JWT</span></td>
+          <td>Published library for Firebase authentication tokens using service accounts</td>
+        </tr>
+        <tr>
+          <td><a href="https://central.ballerina.io/lakpahana/firebase_realtime_database/0.7.4">Firebase Realtime
+              Database Ballerina Library</a></td>
+          <td><span class="tag">Ballerina</span> <span class="tag">Firebase</span> <span class="tag">Database</span>
+          </td>
+          <td>Complete CRUD operations client for Firebase Realtime Database</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/kattis-badge-go">Kattis Badge Generator</a></td>
+          <td><span class="tag">Go</span> <span class="tag">Gin</span> <span class="tag">PostgreSQL</span></td>
+          <td>GitHub README badge for Kattis ranking, 500+ daily API hits</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.npmjs.com/package/medium-to-react">Medium to React Library</a></td>
+          <td><span class="tag">React</span> <span class="tag">Rollup</span> <span class="tag">NPM</span></td>
+          <td>NPM package with 350+ downloads for fetching Medium articles</td>
+        </tr>
+        <tr>
+          <td><a href="https://back-office-web-efac.netlify.app/">Hangouts.lk</a></td>
+          <td><span class="tag">Java</span> <span class="tag">Angular</span> <span class="tag">Spring Boot</span></td>
+          <td>End-to-end restaurant table reservation and management system</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/com22app">LitApp (Formerly COM22APP)</a></td>
+          <td><span class="tag">Vue.js</span> <span class="tag">Firebase</span> <span class="tag">Bootstrap</span></td>
+          <td>Code sharing platform used by 150+ students in classroom</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/team-wallet">Team Wallet</a></td>
+          <td><span class="tag">React</span> <span class="tag">Node.js</span> <span class="tag">MongoDB</span></td>
+          <td>Group expense splitting app, reduced personal spending by 20%</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/jgit">JGit</a></td>
+          <td><span class="tag">JavaScript</span> <span class="tag">Git</span></td>
+          <td>Simple JavaScript implementation of Git's core functionality</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/32bit_RISC_Processor">32-bit RISC Processor</a></td>
+          <td><span class="tag">Verilog</span> <span class="tag">ModelSim</span></td>
+          <td>Single cycle 32-bit RISC processor implementation</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lakpahana/GroupProject_POS_3990_4040">Point of Sale System</a></td>
+          <td><span class="tag">C#</span> <span class="tag">SQLite</span> <span class="tag">WPF</span></td>
+          <td>Efficient POS interface for sales and product management</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
-
-
-  <script>
-    document.addEventListener('keydown', function (event) {
-      if (event.ctrlKey && event.shiftKey && event.key === 'X') {
-        document.querySelector('.hidden-chat-bot').style.display = 'block';
-      }
-    });
-
-    testAPi = "AIzaSyA7vHFIPnuDauJrc_g-4wEeGp-s0cXVEz4";
-
-    masterPrompt = "you are an expert in AI quizzes. I will provide mcq questions and you have to answer them. Please provide correct answer only no need explanation.";
-
-    document.getElementById('chat-bot-send').addEventListener('click', function () {
-      let text = document.getElementById('chat-bot').value;
-      fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${testAPi}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          "contents": [{
-            "parts": [{
-              "text": masterPrompt + text
-            }]
-          }]
-        })
-      }).then(res => res.json()).then(data => {
-        console.log(data);
-        document.getElementById('chat-bot').value = data.candidates[0].content.parts[0].text;
-      })
-    })
-  </script>
-
-
-  <!--
-    - custom js link
-  -->
-  <!-- <script src="./assets/js/script.js"></script> -->
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
